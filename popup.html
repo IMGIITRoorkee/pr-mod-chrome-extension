@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>PR-Mod Server</title>
+    </head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Semantic UI CSS -->
+    <link rel="stylesheet" type="text/css" href="http://semantic-ui.com/dist/semantic.min.css">
+    <!-- Custom CSS to cascade on Semantic UI CSS -->
+    <link rel="stylesheet" type="text/css" href="popup.css">
+    <!-- Custom JS -->
+    <script src="popup.js"></script>
+
+    <body>
+        <div class="main">
+            <form class="ui form">
+                <div class="field">
+                  <label>Server IP</label>
+                  <input type="text" name="server_ip" placeholder="Add server ip">
+                </div>
+                <div class="field">
+                  <label>PORT</label>
+                  <input type="text" name="server_port" placeholder="Server PORT">
+                </div>
+                <div class="buttons">
+                    <button class="ui button" id="set">Set IP</button>
+                    <button class="ui button" id="reset">Reset IP</button>
+                </div>
+              </form>
+              <ul>
+                  <li>Server IP and port number are required to allow PR-Mod extension to interact with backend server.</li>
+                  <li>IP Address is stored in cookies and can be reset using the reset ip button.</li>
+              </ul>
+        </div>
+    </body>
+</html>

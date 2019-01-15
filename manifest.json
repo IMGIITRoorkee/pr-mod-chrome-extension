@@ -10,6 +10,13 @@
         }
     ],
     "permissions":[
-        "activeTab"
-    ]
+        "activeTab",
+        "cookies",
+        "http://*/*",
+        "https://*/*"
+    ],
+    "browser_action":{
+        "default_popup": "popup.html"
+    },
+    "content_security_policy":"script-src 'self' https://apis.google.com; object-src 'self'"
 }
