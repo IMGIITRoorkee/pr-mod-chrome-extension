@@ -9,7 +9,8 @@ function readCookie(name) {
     }
     return null;
 }
-var win;
+
+
 $(document).ready(function(){
     $('.gh-header-actions').append('<div class="btn btn-sm btn-primary pr-mod">PR-Mod</div>');
     
@@ -25,12 +26,18 @@ $(document).ready(function(){
             alert("Server credentials not set. Please open the PR-MOD extension and add server credentials.")
         }
         else{
-            //var win = window.open(server_url+url);
-            win = window.open("https://facebook.com", '_blank');
-
-            win.addEventListener("unload", function(event){
-                alert("hello");
-            });          
+            var win = window.open(server_url+url);
+            /**
+                win.addEventListener("unload", function(event){
+                    $.ajax({
+                        type: "GET",
+                        url: server_url+"logout",
+                        success: function(res){
+                            console.log(res);
+                        }
+                    });
+                });
+            */          
         }
 
     });
